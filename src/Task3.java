@@ -21,14 +21,18 @@ public class Task3 {
 
             switch (type){
                 case 1:
-                    System.out.println("Enter a number: ");
+                    System.out.println("Enter the amount of money: ");
                     double d = getPositiveDouble();
-                    currencies[i] = new Dollar(d);
+                    System.out.println("Enter the currency rate: ");
+                    double cd = getPositiveDouble();
+                    currencies[i] = new Dollar(d, cd);
                     break;
                 case 2:
-                    System.out.println("Enter a number: ");
+                    System.out.println("Enter the amount of money: ");
                     double e = getPositiveDouble();
-                    currencies[i] = new Euro(e);
+                    System.out.println("Enter the currency rate: ");
+                    double ce = getPositiveDouble();
+                    currencies[i] = new Euro(e, ce);
                     break;
 
                 default:

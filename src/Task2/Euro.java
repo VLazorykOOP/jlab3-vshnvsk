@@ -1,16 +1,17 @@
 package Task2;
 
 public class Euro extends Currency{
-    public Euro(double amount){
-        super(amount);
+    public Euro(double amount, double exchangeRate){
+        super(amount, exchangeRate);
     }
     @Override
     public double toUAN() {
-        return amount * 40.5;
+        return amount * exchangeRate;
     }
 
     @Override
     public void print() {
+        System.out.println("Currency: Euro");
         System.out.print(amount + " EUR: ");
         System.out.println(toUAN() + " UAN");
     }

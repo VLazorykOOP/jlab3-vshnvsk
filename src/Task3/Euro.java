@@ -2,12 +2,14 @@ package Task3;
 
 public class Euro implements Currency{
     private double amount;
-    public Euro(double amount){
+    private double exchangeRate;
+    public Euro(double amount, double exchangeRate){
         this.amount = amount;
+        this.exchangeRate = exchangeRate;
     }
     @Override
     public double toUAN() {
-        return amount * 40.5;
+        return amount * exchangeRate;
     }
     @Override
     public void print() {

@@ -2,8 +2,10 @@ package Task2;
 
 public abstract class Currency {
     protected double amount;
-    public Currency(double amount){
+    protected double exchangeRate;
+    public Currency(double amount, double exchangeRate){
         this.amount = amount;
+        this.exchangeRate = exchangeRate;
     }
     public abstract double toUAN();
     public abstract void print();

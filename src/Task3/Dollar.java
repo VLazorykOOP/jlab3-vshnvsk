@@ -2,12 +2,14 @@ package Task3;
 
 public class Dollar implements Currency{
     protected double amount;
-    public Dollar(double amount){
+    protected double exchangeRate;
+    public Dollar(double amount, double exchangeRate){
         this.amount = amount;
+        this.exchangeRate = exchangeRate;
     }
     @Override
     public double toUAN() {
-        return amount * 38.1;
+        return amount * exchangeRate;
     }
     @Override
     public void print() {

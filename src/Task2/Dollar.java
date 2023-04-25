@@ -1,13 +1,14 @@
 package Task2;
 
 public class Dollar extends Currency{
-    public Dollar(double amount){
-        super(amount);
+    public Dollar(double amount, double exchangeRate){
+        super(amount, exchangeRate);
     }
     public double toUAN(){
-        return amount * 38.1;
+        return amount * exchangeRate;
     }
     public void print(){
+        System.out.println("Currency: Dollar");
         System.out.print(amount + " USD: ");
         System.out.println(toUAN() + " UAN");
     }
